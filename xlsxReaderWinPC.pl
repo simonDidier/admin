@@ -1,4 +1,4 @@
-#! /usr/bin/env perl 
+#! /usr/bin/env -CS perl 
 use strict;
 use warnings;
 use 5.010;
@@ -216,19 +216,21 @@ __END__
 
 =head1 NAME
 
-B<xlsxExtract.pl> -- fourni un fichier texte : "server.txt" à partir d'une fiche xlsx fournie en argument qui figure dans le répertoire courant.
+B<xlsxExtract.pl> -- fourni un fichier texte : "server.txt" a partir d'une fiche xlsx fournie en argument qui figure dans le repertoire courant.
 
 =head1 SYNOPSIS
 
 B<xlsxExtract.pl> -p monFichier.xlsx
 
-fourni le fichier "server.txt" dans le répertoire courant où s'exécute le script
+fourni le fichier "server.txt" dans le repertoire courant ou s'execute le script
 	
 =head1 OPTIONS
 
 The options are as follows:
  
 =over 5
+
+=item
 
 --man,-m       print the man page
   
@@ -242,11 +244,11 @@ The options are as follows:
 
 B<xlsxExtract.pl>
 fourni le fichier "server.txt" de structure par ligne : "nom server";"IP" 
-à partir du fichier xlsx (anciens modèles) de supervision fournis  en argument de l'option --path et présent dans le répertoire courant du script.
+a partir du fichier xlsx (anciens modules) de supervision fournis  en argument de l'option --path et present dans le repertoire courant du script.
 
 B<xlsxExtract.pl> -p monFichier.xlsx
 
-les données sont stockées dans un hash :
+les donnees sont stockees dans un hash :
 nom de l'appli {
 					serveur	=> {
 								process => (nomServeur, typeProcessus, nomProcessus, criticalCondition,...)
