@@ -1,0 +1,283 @@
+## Please see file perltidy.ERR
+## Please see file perltidy.ERR
+#! /usr/bin/env -CS perl
+use strict;
+use warnings;
+use 5.010;
+$| = 1;
+use Getopt::Long;
+use Pod::Usage;
+use Data::Dumper;
+use Spreadsheet::Read;
+use Text::Table;
+use Term::ANSIColor qw(:constants);
+
+sub getArgs {
+    GetOptions(
+        'path=s{1}' => \my $path,
+        'man'       => sub { pod2usage( -verbose => 2 ) },
+        'help|?' => sub { pod2usage(1) },
+    ) or pod2usage("Syntax error.");
+    unless ($path) {
+        pod2usage(
+            -exitval => 2,
+            -message => "\n/!\\ repertoire des fichier excel manquant /!\\ \n"
+        );
+    }
+    return $path;
+}
+
+#sub readDir{
+#	my $directory=shift;
+#	opendir my $FHDIR, $directory or die "directory opening failed  : $!";
+#	my @files = readdir($FHDIR);
+#	closedir($FHDIR);
+#	return @files;
+#}
+#
+#sub xslxSelect{
+#	my $r_files=shift;
+#	my @files=@$r_files;
+#	my @xlsx;
+#	for (@files){
+#		my @bits=split /\./,$_;
+#		next unless (my $type=pop @bits);
+#		if ($type eq 'xlsx'){
+#			push @xlsx, $_;
+#		}
+#	}
+#	return @xlsx;
+#}
+
+sub lectureFich {
+    my ($fich) = @_;
+    my %tabl;
+    my $pages;
+    my @bits = split /\./, $fich;
+    my $codApp = shift @bits;
+    say "traitement $codApp";
+    my @commun;
+    my $rubrique = "";
+    my $book     = Spreadsheet::Read->new($fich);
+    my $sheet    = $book->sheet(2);
+    my $maxRow   = $sheet->maxrow;
+
+    for my $rowIndex ( 0 .. $maxRow ) {
+        my @rows = map { defined $_ ? $_ : () } $sheet->row($rowIndex);
+        next unless (@rows);
+        if ( $rows[0] =~ m{Généralité} ) {
+            $rubrique = 'Généralités';
+            next;
+        }
+        if ( $rows[0] =~ m{Serveurs à surveiller} ) {
+            $rubrique = 'Serveurs à surveiller';
+            next;
+        }
+        if ( $rows[0] =~ m{^Nom$} ) {
+            $rubrique = 'Nom';
+            next;
+        }
+        if ( $rows[0] =~ m{Disques et NFS à surveiller} ) {
+            $rubrique = 'Disques et NFS à surveiller';
+            next;
+        }
+        if ( $rows[0] =~ m{Services, processus et instances à surveiller} ) {
+            $rubrique = 'Services, processus et instances à surveiller';
+            next;
+        }
+        if ( $rows[0] =~ m{Plage horaire} ) {
+            last;
+        }
+
+        if ( $rubrique eq 'Généralités' ) {
+            push @commun, \@rows;
+        }
+        if ( $rubrique eq 'Nom' ) {
+            if (@rows) {
+                my $server = $rows[0];
+                @rows = @rows[ 2, 4 ];
+                $tabl{$codApp}{$server}{'osIp'}   = \@rows;
+                $tabl{$codApp}{$server}{"commun"} = \@commun;
+            }
+        }
+        if ( $rubrique eq 'Services, processus et instances à surveiller' ) {
+            unless ( $rows[0] =~ m{^Serveur$|^$} ) {
+                my $server = $rows[0];
+                push @{ $tabl{$codApp}{$server}{'process'} },
+                  [ $rows[4], $rows[5] ];
+            }
+        }
+    }
+    $sheet  = $book->sheet(3);
+    $maxRow = $sheet->maxrow;
+    my @urls;
+    my $col = 0;
+    for my $rowIndex ( 0 .. $maxRow ) {
+        my @rows = $sheet->row($rowIndex);
+        next unless grep { defined } @rows;
+        next unless defined $rows[0];
+        if ( $rows[0] =~ m{Plage horaire pour la surveillance si spécifique} ) {
+            $col = 0;
+            next;
+        }
+        if ( $rows[0] =~ m{URLs à  surveiller - Scénario simple} ) {
+            $col = 3;
+            next;
+        }
+        if ( $rows[0] =~ m{URLs à  surveiller - Scénario complexe} ) {
+            $col = 7;
+            next;
+        }
+        next if $col == 0;
+        if ( $rows[0] =~ m{\Ahttp} ) {
+            if ( defined $rows[$col] ) {
+                @rows = ( $rows[0], $rows[$col] );
+                push @urls, @rows;
+            }
+        }
+    }
+    $tabl{$codApp}{'url'} = \@urls;
+    $pages++;
+    return %tabl;
+}
+
+sub printUrl {
+    my ($server) = shift;
+    open my $SCENARIOSCOLLAB, '>:encoding(UTF-8)', 'scenariosCollab.txt';
+    my $scenarios = Text::Table->new( "SCENARIO", "URL", "CODE APPLI" );
+    for ( keys %$server ) {
+        my $app = substr( $_, 0, 3 ) if ( $server->{$_}{'url'}[1] );
+        my $url = $server->{$_}{'url'}[0] if ( $server->{$_}{'url'}[1] );
+        if ( $app and $url ) {
+            $scenarios->add( $server->{$_}{'url'}[1], $url, $app, );
+        }
+    }
+    print $SCENARIOSCOLLAB $scenarios;
+    open $SCENARIOSCOLLAB, '<', 'scenariosCollab.txt';
+    while (<$SCENARIOSCOLLAB>) { }
+    my $nbScen = $. - 2;
+    open $SCENARIOSCOLLAB, '>>:encoding(UTF-8)', 'scenariosCollab.txt';
+    print $SCENARIOSCOLLAB "\nnombre total de scenarios : $nbScen";
+}
+
+sub printServerIp {
+    my ($tabl) = @_;
+    my %tabl = %$tabl;
+    open my $SERVIP, '>:encoding(UTF-8)', 'server.txt';
+    for my $codApp ( keys %tabl ) {
+        for my $server ( keys %{ $tabl{$codApp} } ) {
+            next if $server eq 'url';
+            my @servers = @{ $tabl{$codApp}{$server}{'osIp'} };
+            if ( $servers[0] ne "" && $servers[1] ne "" ) {
+                print $SERVIP $server . ";" . $servers[0] . ";" . $servers[1];
+                print $server. ";" . $servers[0] . ";" . $servers[1];
+                for my $ps ( @{ $tabl{$codApp}{$server}{'process'} } ) {
+                    print $SERVIP ";" . $ps->[0] . ";" . $ps->[1];
+                    print ";" . $ps->[0] . ";" . $ps->[1];
+                }
+                print $SERVIP "\n";
+                print "\n";
+            }
+        }
+    }
+}
+
+sub threshold {
+    my $seuil = shift;
+    my $thresh;
+    open my $TEST, '>gt;gt;>gt;gt;:encoding(UTF-8)', 'test.txt';
+
+    #say "seuil : $seuil";
+    #say $TEST "seuil : $seuil";
+    if ( $seuil =~
+        m/(&lt;|&gt;)(\d+).*(&lt;|&gt;)(\d+)|(&lt;|&gt;|(?:!=)|=)(\d+)/ )
+    {
+        #say "S1 : $1 - S2 : $2 - S3 : $3 - S4 : $4";
+        #say "S5 : $5 - S6 : $6";
+        if ($6) {    # cas comme : "<lt;lt;1"
+            $thresh = $6 . ':' if $5eq' & lt ';
+			$thresh=' : '.$6 if $5eq' & gt ';
+			$thresh=$6.' : '.$6 if $5eq' != ';
+		} else {
+		# cas comme ">gt;1 ou <lt;10"
+		$thresh=$2.' : '.$4 if ($1eq' & lt;
+            ' && $3eq' & gt;
+            ');
+		}
+	}
+	return $thresh;
+}
+
+sub main {
+	my $fich=getArgs();
+    my %tabl=lectureFich($fich);
+	printServerIp(\%tabl);
+}	 
+
+main();
+
+__END__
+
+=head1 NAME
+
+B<xlsxExtract.pl> -- fourni un fichier texte : "server.txt" a partir d'
+              une fiche xlsx fournie en argument qui figure dans
+              le repertoire courant .
+
+=head1 SYNOPSIS
+
+B<xlsxExtract.pl> -p monFichier.xlsx
+
+fourni le fichier "server.txt" dans le repertoire courant ou s'execute le script
+	
+=head1 OPTIONS
+
+The options are as follows:
+ 
+=over 5
+
+=item
+
+--man,-m       print the man page
+  
+=item
+
+--help,-h      print help
+  
+=back
+  
+=head1 DESCRIPTION
+
+B<xlsxExtract.pl>
+fourni le fichier "server.txt" de structure par ligne : "nom server";"IP" 
+a partir du fichier xlsx (anciens modules) de supervision fournis  en argument de l'option --path et present dans le repertoire courant du script.
+
+B<xlsxExtract.pl> -p monFichier.xlsx
+
+les donnees sont stockees dans un hash :
+nom de l'appli {
+					serveur	=> {
+								process => (nomServeur, typeProcessus, nomProcessus, criticalCondition,...)
+								appli	=> (nomAppli, Os, IP)
+								commun	=> (...)
+								}
+					url		=>	[
+								('http',scenario),
+								('http',scenario),...
+								]
+					commun	=>	(date demande,(nom responsable, nom, poste),(nom projet),...)
+
+					}
+
+					
+
+
+}
+  
+=head1 VERSION
+
+0.01
+
+=cut
+
+              #comment inutile
