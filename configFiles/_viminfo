@@ -1,0 +1,772 @@
+# Ce fichier viminfo a été généré par Vim 8.0.
+# Vous pouvez l'éditer, mais soyez prudent.
+
+# Viminfo version
+|1,4
+
+# 'encoding' dans lequel ce fichier a été écrit
+*encoding=latin1
+
+
+# hlsearch on (H) or off (h):
+~h
+# Dernier motif de recherche  :
+~MSle0~/dos-file-formats
+
+# Dernier motif de recherche Substitue  :
+~MSle0&^
+
+# Dernières chaînes de substitution :
+$\t
+
+# Historique ligne de commande (chronologie décroissante) :
+:wq
+|2,0,1516082896,,"wq"
+:q
+|2,0,1516020664,,"q"
+:235y
+|2,0,1516020471,,"235y"
+:245
+|2,0,1516020413,,"245"
+:219
+|2,0,1516019984,,"219"
+:q!
+|2,0,1516019591,,"q!"
+:w
+|2,0,1515358614,,"w"
+:w ++ff=dos
+|2,0,1515358547,,"w ++ff=dos"
+:e ++ff=dos
+|2,0,1515358531,,"e ++ff=dos"
+:set ff=dos
+|2,0,1515358506,,"set ff=dos"
+:ff dos
+|2,0,1515358339,,"ff dos"
+:h ff
+|2,0,1515358325,,"h ff"
+:h :ff
+|2,0,1515358319,,"h :ff"
+:h dos=fileFormats
+|2,0,1515358253,,"h dos=fileFormats"
+:h dos
+|2,0,1515358227,,"h dos"
+:set list
+|2,0,1515358216,,"set list"
+:h encoding
+|2,0,1515358183,,"h encoding"
+:set nu
+|2,0,1515188699,,"set nu"
+:3
+|2,0,1515188461,,"3"
+:29,30y
+|2,0,1515188423,,"29,30y"
+:8,23s/^/\t/
+|2,0,1515188021,,"8,23s/^/\\t/"
+:e ++enc=latin1
+|2,0,1515177071,,"e ++enc=latin1"
+:e ++enc=cp850
+|2,0,1515177042,,"e ++enc=cp850"
+:set ++enc=cp850
+|2,0,1515177028,,"set ++enc=cp850"
+:set file
+|2,0,1515177005,,"set file"
+:e ++enc=ascii
+|2,0,1515102743,,"e ++enc=ascii"
+:w ++enc=utf-8
+|2,0,1515100380,,"w ++enc=utf-8"
+:e ++enc=windos-1252
+|2,0,1515100055,,"e ++enc=windos-1252"
+:w ++enc=latin1
+|2,0,1515099862,,"w ++enc=latin1"
+:e ++enc=utf-8
+|2,0,1515099810,,"e ++enc=utf-8"
+:!chardet %
+|2,0,1515099343,,"!chardet %"
+:x
+|2,0,1515044509,,"x"
+::q
+|2,0,1514930026,,":q"
+:%s/\r\n$//
+|2,0,1514930018,,"%s/\\r\\n$//"
+:%s/^\r\n$//
+|2,0,1514930013,,"%s/^\\r\\n$//"
+:%s/^\r\n//
+|2,0,1514930001,,"%s/^\\r\\n//"
+:%s///
+|2,0,1514929936,,"%s///"
+:%s/^$//
+|2,0,1514929907,,"%s/^$//"
+:%s/\s*$//
+|2,0,1514929878,,"%s/\\s*$//"
+:%s/^\s*$//
+|2,0,1514929845,,"%s/^\\s*$//"
+:%s/^\s$//
+|2,0,1514929824,,"%s/^\\s$//"
+:%s/^\r//
+|2,0,1514929794,,"%s/^\\r//"
+:%s/^\r$//
+|2,0,1514929747,,"%s/^\\r$//"
+:%s/^:qM//
+|2,0,1514928634,,"%s/^:qM//"
+:%s/^M//
+|2,0,1514928625,,"%s/^M//"
+:%s/\^M$//
+|2,0,1514928608,,"%s/\\^M$//"
+:%s/^M$//
+|2,0,1514928596,,"%s/^M$//"
+:set encoding=cp850
+|2,0,1514927711,,"set encoding=cp850"
+:set encoding=c850
+|2,0,1514927202,,"set encoding=c850"
+:set encoding=850
+|2,0,1514927194,,"set encoding=850"
+
+# Historique chaîne de recherche (chronologie décroissante) :
+?/dos-file-formats
+|2,1,1515358284,47,"dos-file-formats"
+?/dos=file
+|2,1,1515358266,47,"dos=file"
+? ^
+|2,1,1515188021,,"^"
+? \r\n$
+|2,1,1514930018,,"\\r\\n$"
+? ^\r\n$
+|2,1,1514930013,,"^\\r\\n$"
+? ^\r\n
+|2,1,1514930001,,"^\\r\\n"
+? ^$
+|2,1,1514929907,,"^$"
+? \s*$
+|2,1,1514929878,,"\\s*$"
+? ^\s*$
+|2,1,1514929845,,"^\\s*$"
+? ^\s$
+|2,1,1514929824,,"^\\s$"
+? ^\r
+|2,1,1514929794,,"^\\r"
+? ^\r$
+|2,1,1514929747,,"^\\r$"
+? ^:qM
+|2,1,1514928634,,"^:qM"
+? ^M
+|2,1,1514928625,,"^M"
+? \^M$
+|2,1,1514928608,,"\\^M$"
+? ^M$
+|2,1,1514928596,,"^M$"
+?/lectureFich
+|2,1,1514747015,47,"lectureFich"
+?/server
+|2,1,1514746926,47,"server"
+?/say
+|2,1,1514746739,47,"say"
+?/traitement
+|2,1,1514746704,47,"traitement"
+?/print
+|2,1,1514746315,47,"print"
+?/Dump
+|2,1,1514662510,47,"Dump"
+?/$ip
+|2,1,1514662445,47,"$ip"
+?/ip
+|2,1,1514662425,47,"ip"
+?/Serveur
+|2,1,1514661305,47,"Serveur"
+?/serveur
+|2,1,1514661294,47,"serveur"
+?/Table
+|2,1,1514661105,47,"Table"
+
+# Historique expression (chronologie décroissante) :
+
+# Historique ligne de saisie (chronologie décroissante) :
+
+# Historique Ligne de débogage (chronologie décroissante) :
+
+# Registres :
+"0	LINE	0
+	=item
+|3,0,0,1,1,0,1516020471,"=item"
+"1	LINE	0
+	
+|3,0,1,1,1,0,1516038408,""
+"2	LINE	0
+	
+|3,0,2,1,1,0,1516038407,""
+"3	LINE	0
+	ddd
+|3,0,3,1,1,0,1516038406,"ddd"
+"4	LINE	0
+		my %section;
+|3,0,4,1,1,0,1515188892,"	my %section;"
+"5	LINE	0
+		say "in process";
+|3,0,5,1,1,0,1515188430,"	say \"in process\";"
+"6	LINE	0
+	dd
+|3,0,6,1,1,0,1515188241,"dd"
+"7	LINE	0
+			''
+|3,0,7,1,1,0,1515187285,"		''"
+"8	LINE	0
+	
+|3,0,8,1,1,0,1515185843,""
+"9	LINE	0
+		
+|3,0,9,1,1,0,1515185838,"	"
+""-	CHAR	0
+	 
+|3,1,36,0,1,0,1516082876," "
+
+# Marques dans le fichier :
+'0  13  33  ~\vimfiles\perl-support\templates\Templates
+|4,48,13,33,1516082896,"~\\vimfiles\\perl-support\\templates\\Templates"
+'1  2  0  ~\admin\.gitignore
+|4,49,2,0,1516038410,"~\\admin\\.gitignore"
+'2  1  0  ~\admin\server.txt
+|4,50,1,0,1516020664,"~\\admin\\server.txt"
+'3  232  0  ~\admin\xlsxReaderWin.pl
+|4,51,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+'4  208  19  ~\admin\xlsxReaderWin.pl
+|4,52,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+'5  208  19  ~\admin\xlsxReaderWin.pl
+|4,53,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+'6  221  14  ~\admin\xlsxReaderWin.pl
+|4,54,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+'7  221  14  ~\admin\xlsxReaderWin.pl
+|4,55,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+'8  221  14  ~\admin\xlsxReaderWin.pl
+|4,56,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+'9  221  14  ~\admin\xlsxReaderWin.pl
+|4,57,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+
+# Liste de sauts (le plus récent en premier) :
+-'  13  33  ~\vimfiles\perl-support\templates\Templates
+|4,39,13,33,1516082896,"~\\vimfiles\\perl-support\\templates\\Templates"
+-'  1  0  ~\vimfiles\perl-support\templates\Templates
+|4,39,1,0,1516082834,"~\\vimfiles\\perl-support\\templates\\Templates"
+-'  2  0  ~\admin\.gitignore
+|4,39,2,0,1516038410,"~\\admin\\.gitignore"
+-'  2  0  ~\admin\.gitignore
+|4,39,2,0,1516038410,"~\\admin\\.gitignore"
+-'  1  0  ~\admin\.gitignore
+|4,39,1,0,1516038343,"~\\admin\\.gitignore"
+-'  1  0  ~\admin\.gitignore
+|4,39,1,0,1516038343,"~\\admin\\.gitignore"
+-'  1  0  ~\admin\server.txt
+|4,39,1,0,1516020664,"~\\admin\\server.txt"
+-'  1  0  ~\admin\server.txt
+|4,39,1,0,1516020664,"~\\admin\\server.txt"
+-'  1  0  ~\admin\server.txt
+|4,39,1,0,1516020664,"~\\admin\\server.txt"
+-'  1  0  ~\admin\server.txt
+|4,39,1,0,1516020664,"~\\admin\\server.txt"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  232  0  ~\admin\xlsxReaderWin.pl
+|4,39,232,0,1516020486,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  229  0  ~\admin\xlsxReaderWin.pl
+|4,39,229,0,1516020459,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  231  4  ~\admin\xlsxReaderWin.pl
+|4,39,231,4,1516020449,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020411,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  208  19  ~\admin\xlsxReaderWin.pl
+|4,39,208,19,1516020303,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020205,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  221  14  ~\admin\xlsxReaderWin.pl
+|4,39,221,14,1516020152,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  1  0  ~\admin\xlsxReaderWin.pl
+|4,39,1,0,1516020098,"~\\admin\\xlsxReaderWin.pl"
+-'  225  40  ~\admin\xlsxReaderWin.pl
+|4,39,225,40,1516020068,"~\\admin\\xlsxReaderWin.pl"
+-'  225  40  ~\admin\xlsxReaderWin.pl
+|4,39,225,40,1516020068,"~\\admin\\xlsxReaderWin.pl"
+
+# Historique des marques dans les fichiers (les plus récentes en premier) :
+
+> ~\vimfiles\perl-support\templates\Templates
+	*	1516082893	0
+	"	13	33
+	.	13	33
+	+	13	33
+
+> ~\admin\.gitignore
+	*	1516038409	0
+	"	2	0
+	.	3	0
+	+	3	0
+	+	1	35
+	+	2	6
+	+	3	0
+
+> ~\admin\server.txt
+	*	1516020661	0
+	"	1	0
+
+> ~\admin\xlsxReaderWin.pl
+	*	1516020484	0
+	"	232	0
+	^	232	0
+	.	232	0
+	+	1	19
+	+	219	60
+	+	225	40
+	+	219	126
+	+	247	0
+	+	247	104
+	+	251	22
+	+	208	20
+	+	247	37
+	+	234	0
+	+	233	0
+	+	232	0
+
+> ~\tmp\d.pl
+	*	1516019589	0
+	"	8	17
+	^	8	18
+	.	8	17
+	+	87	49
+	+	90	0
+	+	61	27
+	+	34	18
+	+	35	0
+	+	8	17
+
+> ~\.gitconfig
+	*	1516019067	0
+	"	1	0
+
+> ~\tmp\s.pl
+	*	1516012464	0
+	"	9	0
+	^	9	1
+	.	9	0
+	+	8	18
+	+	9	0
+
+> ~\_viminfo
+	*	1516009107	0
+	"	708	1
+
+> ~\.viminfo
+	*	1516009048	0
+	"	382	1
+
+> ~\tst.pl
+	*	1515962836	0
+	"	8	16
+	^	8	17
+	.	8	16
+	+	8	16
+
+> E:\dsti\hello.pl
+	*	1515876319	0
+	"	7	12
+	^	7	13
+	.	7	12
+	+	7	12
+
+> E:\dsti\s.txt
+	*	1515358731	0
+	"	1	0
+
+> E:\dsti\newXls.pl
+	*	1515358614	0
+	"	1	18
+	^	1	19
+	.	1	19
+	+	1	19
+
+> C:\vim80\doc\options.txt
+	*	1515358435	0
+	"	3076	1
+
+> C:\vim80\doc\os_dos.txt
+	*	1515358319	0
+	"	224	0
+
+> ~\tmp\xlR.pl
+	*	1515189088	0
+	"	9	47
+	^	9	48
+	.	9	47
+	+	11	11
+	+	5	3
+	+	6	24
+	+	14	10
+	+	6	24
+	+	14	18
+	+	11	0
+	+	11	21
+	+	14	0
+	+	13	12
+	+	14	0
+	+	11	0
+	+	15	45
+	+	16	28
+	+	17	15
+	+	19	2
+	+	24	0
+	+	19	0
+	+	17	12
+	+	16	15
+	+	17	40
+	+	18	23
+	+	19	0
+	+	24	0
+	+	18	23
+	+	19	0
+	+	18	45
+	+	19	1
+	+	18	0
+	+	15	41
+	+	8	40
+	+	11	0
+	+	10	1
+	+	18	2
+	+	19	1
+	+	23	0
+	+	19	2
+	+	8	12
+	+	10	0
+	+	8	52
+	+	9	61
+	+	19	25
+	+	18	26
+	+	23	0
+	+	19	48
+	+	22	0
+	+	21	45
+	+	7	8
+	+	25	1
+	+	8	0
+	+	34	12
+	+	30	30
+	+	38	17
+	+	38	0
+	+	20	12
+	+	29	16
+	+	30	11
+	+	29	12
+	+	35	0
+	+	38	0
+	+	8	1
+	+	7	0
+	+	8	0
+	+	8	10
+	+	10	1
+	+	8	0
+	+	31	9
+	+	37	9
+	+	9	47
+
+> E:\dsti\result.txt
+	*	1515177071	0
+	"	115	0
+
+> E:\dsti\xlsxReaderWin.pl
+	*	1515102743	0
+	"	116	10
+
+> E:\dsti\adios.pl
+	*	1515101422	0
+	"	9	6
+	^	9	7
+	.	9	6
+	+	1	2
+	+	7	5
+	+	8	14
+	+	9	15
+	+	10	21
+	+	9	6
+
+> E:\dsti\adios
+	*	1515100625	0
+	"	6	14
+	^	6	15
+	.	6	14
+	+	6	14
+
+> E:\dsti\hello
+	*	1515100380	0
+	"	1	0
+
+> E:\dsti\convTest
+	*	1515098557	0
+	"	79	20
+
+> ~\Documents\dsti\server.txt
+	*	1515044504	0
+	"	1	0
+
+> ~\Documents\dsti\xlxsReaderV2.win.pl
+	*	1515044347	0
+	"	80	4
+	^	244	1
+	.	244	1
+	+	244	1
+
+> ~\Documents\dsti\xlsxReaderV2.pl.nix
+	*	1515044153	0
+	"	87	53
+	^	87	54
+	.	87	53
+	+	71	23
+	+	72	0
+	+	71	23
+	+	75	29
+	+	76	23
+	+	75	29
+	+	83	35
+	+	87	53
+	+	95	22
+	+	87	53
+
+> ~\Documents\dsti\xlsxreaderV3.pl.bak
+	*	1515043458	0
+	"	1	0
+
+> ~\Documents\dsti\xlsxreaderV3.pl
+	*	1515043447	0
+	"	1	0
+
+> ~\Documents\dsti\xlsxreaderV2.pl
+	*	1515043422	0
+	"	1	0
+
+> ~\Documents\dsti\xls1.pl
+	*	1515043135	0
+	"	61	1
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~\Documents\xlsxreaderV2.pl
+	*	1514960553	0
+	"	117	2
+
+> E:\dsti\xlsxReaderV5.pl
+	*	1514958676	0
+	"	66	3
+
+> E:\dsti\xlsxReaderV4.pl
+	*	1514958433	0
+	"	80	4
+	^	234	4
+	.	2	0
+	+	217	36
+	+	234	3
+	+	2	0
+	+	347	0
+	+	2	0
+	+	1	0
+	+	2	0
+
+> E:\dsti\c.txt
+	*	1514927719	0
+	"	1	0
+
+> E:\dsti\xlsxReaderV3.pl
+	*	1514927301	0
+	"	140	0
+
+> E:\dsti\xlsxReader.pl
+	*	1514927246	0
+	"	152	0
+
+> E:\dsti\xlsxReaderV2.pl
+	*	1514926014	0
+	"	140	0
+	^	491	1
+	.	491	0
+	+	487	0
+	+	491	0
+
+> E:\dsti\xlsxReaderV1.pl
+	*	1514747859	0
+	"	101	24
+	^	101	25
+	.	101	24
+	+	244	0
+	+	176	0
+	+	71	20
+	+	72	24
+	+	75	29
+	+	76	24
+	+	75	30
+	+	83	35
+	+	84	30
+	+	87	53
+	+	88	48
+	+	95	22
+	+	102	0
+	+	101	24
+
+> E:\dsti\server.txt
+	*	1514662398	0
+	"	1	0
+
+> ~\t
+	*	1514646765	0
+	"	1	0

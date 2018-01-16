@@ -1,0 +1,77 @@
+use Pod::Usage qw(pod2usage);
+use Getopt::Long qw(GetOptions);
+
+#-------------------------------------------------------------------------------
+#  read options and arguments
+#-------------------------------------------------------------------------------
+my %opt;
+GetOptions( \%opt, "help|?", "man", "cmd=s", "obj=s" )
+  || pod2usage( -verbose => 0 );
+pod2usage( -verbose => 1 ) if ( $opt{help} );
+pod2usage( -verbose => 2 ) if ( $opt{man} );
+## Check for too many filenames
+pod2usage( -verbose => 2, -message => "$0: Too many files given.\n" )
+  if ( @ARGV > 2 );
+die "USAGE: $0 -c <commande file> -o <objects file>\n"
+  unless ( exists $opt{obj} and exists $opt{cmd} );
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#  Application Documentation
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+__END__
+
+=head1 NAME
+
+	B<./pgm.pl> --obj <objectConfigFile> --cmd <commandsConfigFile>
+
+=head1 SYNOPSIS
+
+	./pgm.pl --opt1 <option1> --opt2 <option2>
+
+	Options:
+	-obj	fichier contenat les objets sur lesquel vont s'executer les commandes
+	-cmd	fichiers contenant les commandes et A COMPLETER...
+	-help  	brief help message
+	-man   	full documentation
+
+=head1 OPTIONS
+
+=over 8
+
+=item B<-obj>
+
+	fichier contenant la liste des objets sur lesquels les commandes s'executent
+
+=item B<-cmd>
+
+	fichier contenant la liste des commandes et...
+
+=item B<-help>
+
+	Print a brief help message and exits.
+
+=item B<-man>
+
+	Prints the manual page and exits.
+
+=back
+
+=head1 DESCRIPTION
+
+ 	B<./exp.pl> will read the given input files:
+
+=over 8
+
+=item B<-fichier de configuration des objets : --obj>
+
+	chaque ligne du fichier correspond a un objet sur lequel va s'executer les commandes du fichier de commandes. Ce fichier peut contenir de ip, ou des nom de fichiers par exemple.
+
+=item B<-fichier de configuration des commandes : --cmd>
+
+	chaque ligne correspond  a ... A REMPLIR
+
+=back
+
+=cut
+

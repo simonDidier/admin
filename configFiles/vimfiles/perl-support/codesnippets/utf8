@@ -1,0 +1,29 @@
+use utf8;
+ActiverAccents();
+
+print "J'essaie d'utiliser des accents àéé\n";
+print "Essayons les entrées-sorties : \n";
+
+sub ActiverAccents {
+    my $encodage;
+    #    Windows
+    if ( lc($^O) eq 'mswin32' ) {
+        eval {
+            my ($codepage) = ( `chcp` =~ m/:\s+(\d+)/ );
+            $encodage = "cp$codepage";
+            foreach my $h ( \*STDOUT, \*STDERR, \*STDIN, ) {
+                binmode $h, ":encoding($encodage)";
+            }
+        };
+    }
+    else {
+        $encodage = `locale charmap`;
+        eval {
+            foreach my $h ( \*STDOUT, \*STDERR, \*STDIN, ) {
+                binmode $h, ":encoding($encodage)";
+            }
+        };
+    }
+    return $encodage;
+}
+
