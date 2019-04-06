@@ -1,6 +1,0 @@
-I57-PR-V1-TOM01;Centos;10.161.17.140;.*java.*;1
-I57-PR-V1-TOM02;Centos;10.161.17.141;.*java.*;1
-I57-PR-V1-MYS01;Centos;10.161.18.140;.*mysqld.*;!=1
-I57-PR-V1-MYS03;Centos;10.161.18.142;.*mysqld.*;!=1
-I57-PR-V1-TOM03;Centos;10.161.17.142;.*java.*;1
-I57-PR-V1-MYS02;Centos;10.161.18.141;.*mysqld.*;!=1
